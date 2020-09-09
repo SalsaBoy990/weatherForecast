@@ -1,0 +1,39 @@
+<p>
+  <a href="#!/">Back to search</a>
+</p>
+
+<h1 class="h6" ng-style="{ 'color': '#999'}">Forecast for {{ cityName }}:</h1>
+<hr />
+
+<p>Days: <a href="#!/forecast/16" ng-class="{ 'bg-warning': days === '16' }">2</a> | <a href="#!/forecast/32"
+    ng-class="{ 'bg-warning': days === '32' }">4</a></p>
+<hr />
+
+
+
+
+<!-- <div ng-repeat="w in weatherResult.list">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-heading">
+          <h2 class="h4">{{ convertToDateTime(w.dt) | date:'yyyy. MMM. d. HH:mm' }}</h2>
+        </div>
+        <div class="card-body">
+          <p>Daytime temperature: {{ convertToFahrenheit(w.main.temp) }}</p>
+          <p>Daytime temperature: {{ convertToCelsius(w.main.temp) }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+
+<div class="row" ng-repeat="w in weatherResult.list">
+  <div class="col-md-12">
+    <weather-forecast
+      weather-report="w"
+      date-format="yyyy. MMM. d. HH:mm"
+      convert-to-date-time="convertToDateTime(datetime)" convert-to-fahrenheit="convertToFahrenheit(w.main.temp)"
+      convert-to-celsius="convertToCelsius(temperature)"></weather-forecast>
+  </div>
+</div>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en-us" ng-app="weatherApp">
+
+<head>
+  <title>Introduction to AngularJS</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+
+
+  <!-- load bootstrap via CDN -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <style>
+    html,
+    body {
+      font-size: 1.1em;
+    }
+  </style>
+  <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+
+  <!-- load angular via CDN -->
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+  <script src="/node_modules/angular-resource/angular-resource.min.js"></script>
+  <script src="/node_modules/angular-route/angular-route.min.js"></script>
+
+  <script src="main.js"></script>
+  <script src="routes.js"></script>
+  <script src="services.js"></script>
+  <script src="controllers.js"></script>
+  <script src="directives.js"></script>
+</head>
+
+<body>
+
+  <!-- ng-controller="headerController" -->
+  <header >
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <a class="navbar-brand" href="#">Weather Forecast SPA</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" href="#!/"><i class="fa fa-home"></i> Home
+            <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="#!/forecast"> Forecast</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container" ng-style="{'margin-top': '40px'}">
+    <div ng-view>
+
+    </div>
+ 
+  </div>
+
+</body>
+
+</html>

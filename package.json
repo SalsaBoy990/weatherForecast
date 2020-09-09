@@ -1,0 +1,16 @@
+{
+  "name": "alicea",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.14.0",
+    "angular-resource": "^1.8.0",
+    "angular-route": "^1.8.0"
+  }
+}

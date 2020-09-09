@@ -1,0 +1,9 @@
+<div class="card">
+  <div class="card-heading">
+    <h2 class="h4">{{ convertToDateTime({ datetime: weatherReport.dt }) | date: dateFormat }}</h2>
+  </div>
+  <div class="card-body">
+    <p>Daytime temperature: {{ convertToFahrenheit({ temperature: weatherReport.main.temp }) }}</p>
+    <p>Daytime temperature: {{ convertToCelsius({ temperature: weatherReport.main.temp }) }}</p>
+  </div>
+</div>
